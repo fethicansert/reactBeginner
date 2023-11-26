@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +7,16 @@
 }
 
 body{
-   background: rgb(187, 152, 46);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #265D80;
+   font-family: 'Poppins', sans-serif;
+}
+
+.commentHeader{
+    text-transform: capitalize;
+    font-size: 3rem;
 }
 
 header{
@@ -14,13 +25,19 @@ header{
     padding: 1rem;
 }
 
+.container{
+    border: 2px solid #1e597d;
+    width: 700px;
+    padding: 1rem .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
 
-.headerList{
-    display: flex;
+.commentList{
     list-style: none;
 }
 
-
-.listItem{
-    margin-left: .5rem;
+.reactLogo{
+    font-style: italic;
+    width: 70px;
 }
