@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background: rgb(187, 152, 46);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.headerList{
+    display: flex;
+    list-style: none;
+}
+
+
+.listItem{
+    margin-left: .5rem;
+}
