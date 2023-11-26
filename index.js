@@ -34,19 +34,115 @@ const root = document.getElementById('root');
 
 const logo = 'logos/reactLogo.png';
 
-const page = <div className="container">
-    <img className='reactLogo' src={ logo } alt='React Logo'></img>
-    <h1 className='commentHeader'>Fun fuct about Reaact</h1>
-    <ul className='commentList'>
-        <li className="listItem">Was firsr released in 2013</li>
-        <li className="listItem">Was orginaly created by Jordan Walke</li>
-        <li className="listItem">Has well over 1ook start on GitHub</li>
-        <li className="listItem">Has maintained by Facebook</li>
-        <li className="listItem">Powers thousands of enterpise apps, incluiding mobile apps</li>
-    </ul>
-</div>
 
-ReactDOM.render(page, root);
+
+// console.log(page);
+ReactDOM.render(<Page />, root);
+
+
+const ReactLogo = <img src='logos.reactLogo.png' alt='ReactLogo' width='40px'></img>
+
+function Page(){
+    return (
+        <div className="container">
+            <Header />
+            <Main />
+            <Footer />
+        </div>
+    );
+}
+
+function Header(){
+    return (
+    <header>
+        <div className='header-flex'>
+            <img className='reactLogo' src='logos/reactLogo.png' alt='ReactLogo' width='50px'></img>
+            <h1>Learn React</h1>
+        </div>
+        <Nav/>
+    </header>);
+}
+
+
+function Nav(){
+    return (
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contanct</li>
+            </ul>
+        </nav>
+    );
+}
+
+function Main(){
+    return (
+        <ol>
+            <li>Why I love react bla bla bla :)</li>
+            <li>Why I love react bla bla bla :)</li>
+            <li>Why I love react bla bla bla :)</li>
+            <li>Why I love react bla bla bla :)</li>
+        </ol>
+    );
+}
+
+function Footer(){
+    return (
+        <footer>
+            <p>c 2023 Sert development. All rights reserved</p>
+        </footer>
+    );
+}
+
+
+
+function TemporaryPage(){ //React Component
+    return (
+        <div className="container">
+            <img className='reactLogo' src={ logo } alt='React Logo'></img>
+            <h1 className='commentHeader'>Fun fuct about Reaact</h1>
+            <ul className='commentList'>
+                <li className="listItem">Was firsr released in 2013</li>
+                <li className="listItem">Was orginaly created by Jordan Walke</li>
+                <li className="listItem">Has well over 1ook start on GitHub</li>
+                <li className="listItem">Has maintained by Facebook</li>
+                <li className="listItem">Powers thousands of enterpise apps, incluiding mobile apps</li>
+                <br></br>
+                <OrderedList />
+            </ul>
+        </div>
+    );
+}
+
+
+function OrderedList(){
+    return (
+        <ol className="orderetList">
+            <li className="listItem">Was firsr released in 201</li>
+                <li className="listItem">Was orginaly created by Jordan Walke</li>
+                <li className="listItem">Has well over 1ook start on GitHub</li>
+                <li className="listItem">Has maintained by Facebook</li>
+                <li className="listItem">Powers thousands of enterpise apps, incluiding mobile apps</li>
+        </ol>
+    );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// const page1 = (  JSX experssionss must have one parrent JavaScript XML
+//     <h1>ss</h1>
+//     <p>ssds</p>
+// );
 
 // root.append(JSON.stringify(page));
 
@@ -71,3 +167,6 @@ ReactDOM.render(page, root);
 //Direkt bir sekilde h1 yarat(createElement) icine bunu ekle (innerHTML) ve buraya ekle (appendChild) demiyorum...
 //RactDOM.render ile ise h1 elementimi root ekliyorum
 //Bunlari dili anlayacagi sekilde soyluyorum veya gosteriyorum bunu istiyorum tamamm coder bunu yapiyorum...`
+
+//Composable aciklayabilmem icin daha fazla bilgiye ihtiyacim var.
+//Simdilik diyebilirim ki olusturdum react parcalarini farkli yerlerde farkli sekilde legolar gibi kullanabilmem 

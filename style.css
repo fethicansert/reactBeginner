@@ -19,22 +19,45 @@ body{
     font-size: 3rem;
 }
 
-header{
+header,
+.header-flex,
+.container{
     display: flex;
     align-items: center;
-    padding: 1rem;
+}
+
+header{
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reactLogo{
+    margin-right: .4rem;
 }
 
 .container{
+    flex-direction: column;
     border: 2px solid #1e597d;
     width: 700px;
-    padding: 1rem .5rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.commentList{
+.commentList,
+.orderetList,
+ul{
     list-style: none;
+    display: flex;
+}
+
+ol{
+    margin: 1rem 0;
+}
+
+li{
+    margin-left: .7rem;
 }
 
 .reactLogo{
